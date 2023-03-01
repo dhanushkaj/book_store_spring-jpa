@@ -104,7 +104,7 @@ public class BookController  extends BaseController{
 
 	}
 
-	@GetMapping("/books/publication")
+	@GetMapping("/books/publication/{publication}")
 	public ResponseEntity<List<Book>> findByPublication(@PathVariable("publication") String publication) {
 		try {
 			List<Book> books = bookRepository.findByPublication(publication);
