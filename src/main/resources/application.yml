@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://aurora-traxqa.cluster-cbviktuyghqi.us-east-2.rds.amazonaws.com:5432/shipxdb_production?escapeSyntaxCallMode=callIfNoReturn
+    username: production
+    password: production
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
